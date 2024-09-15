@@ -1,14 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import AppRoutes from "./routes/AppRoutes";
+import { BrowserRouter as Router } from "react-router-dom";
+import ContextApi from "./contextapi/ContextApi";
 export default function App() {
   return (
-    <div>
-      iam the starter pac with 
-      <br />
-      <h1>tailwind css</h1>
-      <h1>shadcn ui </h1>
-      <h1>react router</h1>
-      <h1>axios</h1>
-    </div>
-  )
+    <ContextApi>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </ContextApi>
+  );
 }
